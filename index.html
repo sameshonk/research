@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Research</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<div class="header" id="box">
+			<div class="top">
+				<h2>The C Programming Language & Networking</h2>
+				<nav>
+					<a href="index.html">Home</a>
+					<a href="entries.html">Entries</a>
+					<a href="links.html">Links</a>
+				</nav>
+			</div>
+			<div id="image-container">
+				<img id="random-image" src="" alt="Random Image">
+			</div>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					const imageFiles = [
+						'assets/books/Yunyun_Holding_The_C_Programming_Language.png',
+						'assets/books/Yamada_Nina_Holding_C_Programming_Language.png',
+						'assets/books/Ui_Hirasawa_Holding_C_Programming_Language.png',
+						'assets/books/Tsukukakushi_Tsukiko_Holding_C_Programming_Language.png',
+						'assets/books/Tomoko_Kuroki_Holding_C_Programming_Language.jpg',
+						'assets/books/Tohru_Reading_C_Programming_Language.png',
+						'assets/books/Suzuka_Nagami_Reading_C_Programming_Language.png',
+						'assets/books/Suzuka_Nagami_Holding_C_Programming_Language.png',
+						'assets/books/Shinomiya_Kaguya_Reading_C_Programming_Language.png',
+						'assets/books/Shimoe_Koharu_Reading_C_Programming_Language.jpg',
+						'assets/books/Shima_Rin_Motivated_With_C.png',
+						'assets/books/Shalltear_Overlord_Holding_C_Programming_Language.png',
+						'assets/books/Sakurauchi_Riko_Holding_C_Programming_Language.png',
+						'assets/books/Sakura_Nene_Holding_C_Programming_Language_Book.jpg',
+						'assets/books/Sakurajima_Mai_Holding_C_Programming_Language.png',
+						'assets/books/Ryo_Yamada_Holding_C_Book.jpg',
+						'assets/books/Renge_Reading_C_Programming_Language.jpg',
+						'assets/books/Nagato_Yuki_Wakeboarding_Reading_C_Programming_Language.jpg',
+						'assets/books/Nagato_Yuki_Reading_The_C_Programming_Language_In_The_Library.png',
+						'assets/books/Mysterious_Heroine_X_Holding_C_Programming_Language.jpg',
+						'assets/books/Murasaki_Shikibu_Holding_C_Programming_Language_Polish.jpg',
+						'assets/books/Murakami_Shiina_Holding_Computer_C_Programming_Language.png',
+						'assets/books/Miyamizu_Mitsuha_Reading_C_Programming.png',
+						'assets/books/Mio_Akiyama_Holding_C_Book.gif',
+						'assets/books/Mai_Sakurajima_Holding_C_Programming_Language.png',
+						'assets/books/Kunikida_Hanamaru_Holding_C_Programming_Language.png',
+						'assets/books/297974 bribing scene.png',
+						'assets/books/Meteora_Österreich_Holding_C_Programming_Language.png',
+						'assets/books/Megumin_Holding_C_Programming_Language.jpg',
+						'assets/books/Makise_Kurisu_Holding_C_Programming_Language.png',
+						'assets/books/Maki_Oze_holding_introducao_a_programacao_com_a_linguagem_C.jpg',
+						'assets/books/Kuroneko_Holding_Fake_C_Book.png',
+						'assets/books/Kuriyama_Mirai_flips_through_The_C_Programming_Language.gif',
+						'assets/books/Koume_Shirasaka_Holding_C_Programming_Language.png',
+						'assets/books/Komi_san_C.png',
+						'assets/books/Koizumi_Hanayo_Holding_C_Programming_Language.png',
+						'assets/books/Kochiya_Sanae_Holding_C_Programming_Language.png',
+						'assets/books/Kitagawa_Marin_Holding_C_Programming_Language.png',
+						'assets/books/Karen_C_Programming_Language.png',
+						'assets/books/Kagamihara_nadeshiko_Reading_C_Programming_Language.png',
+						'assets/books/Hibiki_Holding_C_Programming_Language.png',
+						'assets/books/Hakurei_Reimu_Holding_C_Programming_Language.jpg',
+						'assets/books/Fuko_Ibuki_Holding_Up_C.jpg',
+						'assets/books/Eris_Grayrat_Holding_The_C_Programming_Language.png',
+						'assets/books/Chitanda_Eru_Holding_C_Programming_Language.jpg',
+						'assets/books/Cardcaptor_Sakura_Kinomoto_C_Programming_Language.jpg',
+						'assets/books/Arikawa_Hime_Holding_C_Programming_Language.png',
+						'assets/books/Akiyama_Mio_Reading_C_Programming_Language.png',
+						'assets/books/Ai_Hayasaka_Shinomiya_Kaguya_C_Programming_Language.png',
+						'assets/books/Aharen_Reina_Holding_C_Programming_Language.png'
+						// Add more paths as needed
+					];
+
+					const imageContainer = document.getElementById('image-container');
+					const randomImage = document.getElementById('random-image');
+
+					function getRandomImage() {
+						const randomIndex = Math.floor(Math.random() * imageFiles.length);
+						return imageFiles[randomIndex];
+					}
+
+					function changeImage() {
+						const randomImageFileName = getRandomImage();
+						// Set the image source directly without modifying the path
+						randomImage.src = randomImageFileName;
+						randomImage.alt = 'Random Image: ' + randomImageFileName;
+					}
+
+					changeImage(); // Call the changeImage function when the page is loaded
+				});
+			</script>
+			<img src="assets/tux.png" alt="tux" id="tux">
+			<img src="assets/nothoughts.svg" alt="tux" id="tux_tex">
+		</div>
+		<div class="main" id="box">
+			<h2>Reflection</h2>
+			<p>
+				This project's main goal is to build a strong foundation in C programming, which is essential for understanding
+				computer networking. It involves learning key C programming concepts like socket programming, network protocols,
+				and security. By working on practical projects like setting up a self-hosted VPN or creating an email server, the
+				aim is to develop the skills needed to design and manage secure and efficient network systems. Ultimately, this
+				project aims to prepare me for careers in network administration, engineering, or cybersecurity by providing the
+				necessary knowledge and expertise.
+			</p>
+		</div>
+		<div class="side" id="box">
+			<h2>Outline</h2>
+			<ul>
+				<li>The C Programming Language</li>
+				<ul>
+					<li>Notebook</li>
+					<ul>
+						<li>Chapter 1</li>
+					</ul>
+				</ul>
+				<li>Networking</li>
+				<ul>
+					<li>...</li>
+					<li>Homelab</li>
+					<li>Projects</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+</body>
+
+</html>
