@@ -21,87 +21,49 @@
 					<a href="index.html">Home</a>
 					<a href="entries.html">Entries</a>
 					<a href="links.html">Links</a>
+					<a href="scraps.html">Scraps</a>
 				</nav>
 			</div>
-			<div id="image-container">
-				<img id="random-image" src="" alt="Random Image">
+
+			<img src="assets/tux.png" alt="tux" id="tux">
+
+			<img src="assets/dango.png" alt="dango" id="dango">
+
+			<div id="fun-fact-container">
+				<p id="fun-fact"></p>
 			</div>
 			<script>
-				document.addEventListener('DOMContentLoaded', function () {
-					const imageFiles = [
-						'assets/books/Yunyun_Holding_The_C_Programming_Language.png',
-						'assets/books/Yamada_Nina_Holding_C_Programming_Language.png',
-						'assets/books/Ui_Hirasawa_Holding_C_Programming_Language.png',
-						'assets/books/Tsukukakushi_Tsukiko_Holding_C_Programming_Language.png',
-						'assets/books/Tomoko_Kuroki_Holding_C_Programming_Language.jpg',
-						'assets/books/Tohru_Reading_C_Programming_Language.png',
-						'assets/books/Suzuka_Nagami_Reading_C_Programming_Language.png',
-						'assets/books/Suzuka_Nagami_Holding_C_Programming_Language.png',
-						'assets/books/Shinomiya_Kaguya_Reading_C_Programming_Language.png',
-						'assets/books/Shimoe_Koharu_Reading_C_Programming_Language.jpg',
-						'assets/books/Shima_Rin_Motivated_With_C.png',
-						'assets/books/Shalltear_Overlord_Holding_C_Programming_Language.png',
-						'assets/books/Sakurauchi_Riko_Holding_C_Programming_Language.png',
-						'assets/books/Sakura_Nene_Holding_C_Programming_Language_Book.jpg',
-						'assets/books/Sakurajima_Mai_Holding_C_Programming_Language.png',
-						'assets/books/Ryo_Yamada_Holding_C_Book.jpg',
-						'assets/books/Renge_Reading_C_Programming_Language.jpg',
-						'assets/books/Nagato_Yuki_Wakeboarding_Reading_C_Programming_Language.jpg',
-						'assets/books/Nagato_Yuki_Reading_The_C_Programming_Language_In_The_Library.png',
-						'assets/books/Mysterious_Heroine_X_Holding_C_Programming_Language.jpg',
-						'assets/books/Murasaki_Shikibu_Holding_C_Programming_Language_Polish.jpg',
-						'assets/books/Murakami_Shiina_Holding_Computer_C_Programming_Language.png',
-						'assets/books/Miyamizu_Mitsuha_Reading_C_Programming.png',
-						'assets/books/Mio_Akiyama_Holding_C_Book.gif',
-						'assets/books/Mai_Sakurajima_Holding_C_Programming_Language.png',
-						'assets/books/Kunikida_Hanamaru_Holding_C_Programming_Language.png',
-						'assets/books/297974 bribing scene.png',
-						'assets/books/Meteora_Österreich_Holding_C_Programming_Language.png',
-						'assets/books/Megumin_Holding_C_Programming_Language.jpg',
-						'assets/books/Makise_Kurisu_Holding_C_Programming_Language.png',
-						'assets/books/Maki_Oze_holding_introducao_a_programacao_com_a_linguagem_C.jpg',
-						'assets/books/Kuroneko_Holding_Fake_C_Book.png',
-						'assets/books/Kuriyama_Mirai_flips_through_The_C_Programming_Language.gif',
-						'assets/books/Koume_Shirasaka_Holding_C_Programming_Language.png',
-						'assets/books/Komi_san_C.png',
-						'assets/books/Koizumi_Hanayo_Holding_C_Programming_Language.png',
-						'assets/books/Kochiya_Sanae_Holding_C_Programming_Language.png',
-						'assets/books/Kitagawa_Marin_Holding_C_Programming_Language.png',
-						'assets/books/Karen_C_Programming_Language.png',
-						'assets/books/Kagamihara_nadeshiko_Reading_C_Programming_Language.png',
-						'assets/books/Hibiki_Holding_C_Programming_Language.png',
-						'assets/books/Hakurei_Reimu_Holding_C_Programming_Language.jpg',
-						'assets/books/Fuko_Ibuki_Holding_Up_C.jpg',
-						'assets/books/Eris_Grayrat_Holding_The_C_Programming_Language.png',
-						'assets/books/Chitanda_Eru_Holding_C_Programming_Language.jpg',
-						'assets/books/Cardcaptor_Sakura_Kinomoto_C_Programming_Language.jpg',
-						'assets/books/Arikawa_Hime_Holding_C_Programming_Language.png',
-						'assets/books/Akiyama_Mio_Reading_C_Programming_Language.png',
-						'assets/books/Ai_Hayasaka_Shinomiya_Kaguya_C_Programming_Language.png',
-						'assets/books/Aharen_Reina_Holding_C_Programming_Language.png'
-						// Add more paths as needed
-					];
+				const funFacts = [
+					"Linux is a popular choice for governments and space agencies due to its security and reliability",
+					"The chrome operating system that our school cromebooks run are based on the linux kernel",
+					"The International Space Station and the Mars Rover both use Linux-based systems",
+					"Tux the penguin is the official mascot of Linux, chosen by Linus Torvalds, the creator of Linux, because penguins are cute and don't have much to do with operating systems.",
+					"The Linux kernel, the core of the Linux operating system, was initially released by Linus Torvalds in 1991 when he was just a student at the University of Helsinki.",
+					"Android, the popular mobile operating system, is based on the Linux kernel. This means that Android devices are, in essence, running a version of Linux.",
+					"The ARPANET, the precursor to the modern internet, was developed in the late 1960s and early 1970s by the U.S. Department of Defense's Advanced Research Projects Agency (ARPA), which is where the term 'ARPANET' comes from.",
+					"The first email was sent over the ARPANET in 1971 by Ray Tomlinson. He used the '@' symbol to separate the user's name from the computer they were using.",
+					"The World Wide Web (WWW) was created in 1989 by British computer scientist Tim Berners-Lee while working at CERN in Switzerland. The first website went live in 1991.",
+					"The C programming language was created by Dennis Ritchie at Bell Labs in the early 1970s. It evolved from the B programming language, which was developed by Ken Thompson.",
+					"The 'Hello, World!' program, a simple program that prints this phrase to the screen, is often the first program written by those learning a new programming language. The tradition of using 'Hello, World!' dates back to the book 'The C Programming Language' by Brian Kernighan and Dennis Ritchie, which introduced C to a wider audience.",
+					"C is considered a 'low-level' programming language because it provides a high level of control over hardware and memory. This makes it suitable for systems programming and developing operating systems.",
+					"The C Standard Library includes a wide range of functions for tasks such as input/output, string manipulation, and memory allocation. These functions are part of the C language specification and provide a consistent way to perform common tasks across different platforms.",
+					"Open-source projects like Linux showcase global collaboration, with developers worldwide working together to create and enhance software.",
+					"There are over 1.8 billion websites on the internet, highlighting its vastness. It would take over 57 years to visit each one at a rate of one per second.",
+				];	
+		
+				document.addEventListener("DOMContentLoaded", function() {
+					const funFactContainer = document.getElementById("fun-fact-container");
+					const funFactElement = document.getElementById("fun-fact");
 
-					const imageContainer = document.getElementById('image-container');
-					const randomImage = document.getElementById('random-image');
+					// Generate a random index to select a fun fact
+					const randomIndex = Math.floor(Math.random() * funFacts.length);
 
-					function getRandomImage() {
-						const randomIndex = Math.floor(Math.random() * imageFiles.length);
-						return imageFiles[randomIndex];
-					}
-
-					function changeImage() {
-						const randomImageFileName = getRandomImage();
-						// Set the image source directly without modifying the path
-						randomImage.src = randomImageFileName;
-						randomImage.alt = 'Random Image: ' + randomImageFileName;
-					}
-
-					changeImage(); // Call the changeImage function when the page is loaded
+					// Display the randomly selected fun fact
+					funFactElement.textContent = funFacts[randomIndex];
 				});
 			</script>
-			<img src="assets/tux.png" alt="tux" id="tux">
-			<img src="assets/nothoughts.svg" alt="tux" id="tux_tex">
+			<img src="assets/sign.png" id="sign">
+
 		</div>
 		<div class="main" id="box">
 			<h2>Reflection</h2>
@@ -114,6 +76,10 @@
 				necessary knowledge and expertise.
 			</p>
 		</div>
+
+		<img src="assets/fubuki.png" id="fubuki">
+		<img src="assets/ui.png" id="ui">
+
 		<div class="side" id="box">
 			<h2>Outline</h2>
 			<ul>
@@ -131,8 +97,10 @@
 					<li>Projects</li>
 				</ul>
 			</ul>
+			<img src="assets/tux2.png" alt="tux" id="tux2">
 		</div>
 	</div>
+	<img src="assets/tux3.png" alt="tux" id="tux3">
 </body>
 
 </html>
