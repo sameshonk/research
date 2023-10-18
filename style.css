@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-	margin: 30px 180px 0px 180px;
+	margin: 20px 10% 0px 10%;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -36,7 +36,7 @@ p {
 
 #box {
 	background: cyan;
-	border: 2px solid black;
+	border: 2px solid grey;
 	margin: 4px;
 	position: relative;
 }
@@ -75,14 +75,14 @@ h4 {
 	font-size: 22px;
 }
 
-#fun-fact-container {
+#funfactcontainer {
 	position: absolute;
 	bottom: 0;
 	right: 0;
-	width: 650px;
+	width: 600px;
 }
 
-#fun-fact {
+#funfact {
 	margin: 0;
 }
 
@@ -99,7 +99,7 @@ ul {
 	padding-left: 24px;
 }
 
-#skeweredDango {
+#skewereddango {
 	height: 280px;
 	position: absolute;
 	right: 0;
@@ -113,29 +113,27 @@ ul {
 	position: relative;
 }
 
-.scrap-img {
+.scrapimg {
 	border: 2px dashed black;
+	margin: 35px;
 }
 
-#random-image {
-	height: 450px;
-	margin: 50px;
+#randomimage {
+	height: 20vw;
 	rotate: 2deg;
 }
 
 #update {
-	height: 350px;
-	margin: 70px;
+	height: 15vw;
 	rotate: -3deg;
 }
 
 #neofetch {
-	height: 300px;
+	height: 15vw;
 	rotate: -4deg;
-	margin: 70px;
 }
 
-#tux3 {
+#bestbuds {
 	position: absolute;
 	height: 200px;
 	bottom: 0;
@@ -164,4 +162,12 @@ ul {
 	bottom: 0;
 	right: 0;
 	z-index: 2;
+}
+
+#code {
+	background: lightcyan;
+	position: relative;
+	margin: 20px;
+	padding: 10px;
+	border-left: 2px solid grey;
 }

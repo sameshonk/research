@@ -52,8 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
 						// Add more paths as needed
 					];
 
-					const imageContainer = document.getElementById('image-container');
-					const randomImage = document.getElementById('random-image');
+					const imageContainer = document.getElementById('imagecontainer');
+					const randomImage = document.getElementById('randomimage');
 
 					function getRandomImage() {
 						const randomIndex = Math.floor(Math.random() * imageFiles.length);
