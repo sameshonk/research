@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Notebook</title>	
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+
+<body class="cool">
+	<div class="container">
+		<div id="box">
+			<div class="top">
+				<h2>Pointers</h2>
+
+				<nav>
+					<a href="../index.html">Home</a>
+				</nav>		
+			</div>
+
+			<p>
+				Pointers in C are variables that store memory addresses, allowing indirect access to data. They are a powerful 
+				feature, often used to pass references to data structures, modify variables indirectly, and manage memory 
+				efficiently by dynamically allocating and deallocating memory. Pointers enable low-level memory manipulation and are 
+				a fundamental concept in C programming.
+			</p>
+
+			<p>
+				The follwing C program illustrates the concept of pointers, a fundamental feature in the C programming language. In 
+				this program, we have a main function and a helper function called increment.
+			</p>
+
+			<pre class="code">
+<green>#include</green> <dgreen>&lt;stdio.h&gt;</dgreen>
+
+<red>void</red> increment(<red>int</red> *p)  <grey>// note that it accepts a pointer to an int</grey>
+{
+	*p = *p + <lgreen>1</lgreen>;        <grey>// add one to the thing p points to</grey>
+}
+
+int main(<red>void</red>)
+{
+	<red>int</red> i = <lgreen>10</lgreen>;
+	<red>int</red> *j = &i;  <grey>// note the address-of; turns it into a pointer to i</grey>
+
+	printf(<blue>"i is %d\n"</blue>, <lgreen>i</lgreen>);        <grey>// prints "10"</grey>
+	printf(<blue>"i is also %d\n"</blue>, *j);  <grey>// prints "10"</grey>
+
+	increment(j);                  <grey>// j is an int*--to i</grey>
+
+	printf(<blue>"i is %d\n"</blue>, i);        <grey>// prints "11"!</grey>
+}			</pre>
+
+		<!--	      
+			<img src="../assets/konatwo.png" id="konatwo"></img>
+			<img src="../assets/konashadow.png" id="konashadow"></img>
+		-->
+
+			<p>
+				In the main function, an integer variable 'i' is declared and initialized to 10. A pointer 'j' is also declared, and 
+				it is assigned the address of 'i' using the & operator. This means that 'j' now points to the memory location of 'i'.
+			</p>
+
+	   	 	<pre class="code">
+int main(<red>void</red>)
+{
+	<red>int</red> i = <lgreen>10</lgreen>;
+	<red>int</red> *j = &i;</pre>
+
+			<p>
+				The program proceeds to print the value of 'i' using printf, resulting in the output "i is 10." It also prints the value 
+				pointed to by 'j', which is the same as 'i', so it prints "i is also 10."
+			</p>
+
+			<pre class="code">
+	printf(<blue>"i is %d\n"</blue>, <lgreen>i</lgreen>);
+	printf(<blue>"i is also %d\n"</blue>, *j);</pre>
+
+			<p>
+				The next line calls the 'increment' function, passing 'j' as an argument. This function takes a pointer to an integer 
+				and increments the value it points to by 1.
+			</p>
+
+			<pre class="code">
+	increment(j);	</pre>
+
+	    	<pre class="code">
+<red>void</red> increment(<red>int</red> *p)
+{
+	*p = *p + <lgreen>1</lgreen>;
+}			</pre>
+
+			<p>
+				Finally, after the 'increment' function call, the program prints the value of 'i' again using printf, which now prints "i is 
+				11" because 'i' was modified by the 'increment' function. This demonstrates how changes made to the value pointed to by a 
+				pointer affect the original variable it references, highlighting the power and utility of pointers in C.
+			</p>
+
+	    		<pre class="code">
+	printf(<blue>"i is %d\n"</blue>, i);</pre>
+		</div>
+	</div>
+</body>
+
+</html>

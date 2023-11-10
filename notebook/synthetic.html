@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Notebook</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" type="text/css" href="../style.css" />
+</head>
+<body class="cool">
+	<div class="container">
+		<div id="box">
+			<div class="top">
+				<h2>Synthetic Division Script</h2>
+				<nav>
+					<a href="../index.html">Home</a>
+				</nav>
+			</div>
+
+			<p>
+				This page contains a synthetic division script in C. Synthetic division is a mathematical 
+				technique used to divide polynomials by a linear factor. The program takes the degree of 
+				the polynomial, the coefficients, and the divisor as input and calculates the results of 
+				synthetic division.
+			</p>
+
+			<pre class="code">
+<green>#include</green> <dgreen>&lt;stdio.h&gt;</dgreen>
+
+<red>void</red> syntheticDivision(<red>int</red> coefficients[], <red>int</red> n, int divisor, <red>int</red> results[]) {
+	<red>int</red> i;
+	results[<lgreen>0</lgreen>] = coefficients[<lgreen>0</lgreen>];
+	for (i = <lgreen>1</lgreen>; i < n; i++) {
+		results[i] = results[i - <lgreen>1</lgreen>] * divisor + coefficients[i];
+	}
+}
+
+<red>int</red> main() {
+	<red>int</red> n;
+	printf(<blue>"Enter the degree of the polynomial: "</blue>);
+	scanf(<blue>"%d"</blue>, &n);
+
+	<red>int</red> coefficients[n + <lgreen>1</lgreen>];
+	<red>int</red> i;
+
+	printf(<blue>"Enter the coefficients of the polynomial from the highest degree to lowest:\n"</blue>);
+	for (i = n; i >= <lgreen>0</lgreen>; i--) {
+		printf(<blue>"Coefficient for x^%d: "</blue>, i);
+		scanf(<blue>"%d"</blue>, &coefficients[i]);
+	}
+
+	<red>int</red> divisor;
+	printf(<blue>"Enter the divisor (c): "</blue>);
+	scanf("%d", &divisor);
+
+	<red>int</red> results[n]; <grey>// Array to store the results of synthetic division</grey>
+
+	syntheticDivision(coefficients, n + <lgreen>1</lgreen>, divisor, results);
+
+	printf("The results of synthetic division are:\n");
+	for (i = 0; i < n; i++) {
+		printf(<blue>"x^%d: %d\n"</blue>, n - i - 1, results[i]);
+	}
+
+	return <lgreen>0</lgreen>;
+}			</pre>
+
+
+			<p>
+				The loop for synthetic division within the <c>`syntheticDivision`</c> function iteratively computes each term of the quotient 
+				polynomial. Beginning with an initialization of <c>`i = 1`</c>, the loop progresses through the coefficients of the polynomial, 
+				excluding the constant term, and employs the synthetic division algorithm to determine each term of the result polynomial. The 
+				update equation, <c>`results[i] = results[i - 1] * divisor + coefficients[i]`</c>, sums up the process by multiplying the 
+				previous result by the divisor and adding the next coefficient. The loop continues until <c>`i`</c> reaches the degree of the p
+				olynomial plus one <c>(`n`)</c>, ensuring that all coefficients of the quotient polynomial are computed.
+			</p>
+
+
+			<p>
+				Here I divide 3x<sup>3</sup> − 2x<sup>2</sup> + 2x − 5 by x + 1
+			<p>
+
+<pre class="terminal">
+[starberryfren@starberryfren sea]$ ./synthetic
+Enter the degree of the polynomial: 3
+Enter the coefficients of the polynomial from highest degree to lowest:
+Coefficient for x^3: 3
+Coefficient for x^2: -2
+Coefficient for x^1: 2                                ***Somethin here is wrong***
+Coefficient for x^0: -5
+Enter the divisor (c): -1
+The results of synthetic division are:
+x^2: -5
+x^1: 7
+x^0: -9</pre>
+
+			<p>
+				And get x<sup>2</sup> -5x + 7x − 9/x + 1
+			<p>
+		</div>
+	</div>
+</body>
+</html>

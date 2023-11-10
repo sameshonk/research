@@ -3,63 +3,34 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>learnin sea</title>
+	<title>Home</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta name="description" content="" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="cool">
 	<div class="container">
 		<div class="header" id="box">
 			<div class="top">
-				<h2>The C Programming Language & Networking</h2>
+				<h2>Computer Science Shenanigans (CSS)</h2>
+
 				<nav>
 					<a href="index.html">Home</a>
 					<a href="entries.html">Entries</a>
 					<a href="links.html">Links</a>
-					<a href="scraps.html">Scraps</a>
 				</nav>
 			</div>
 
-			<img src="assets/dango.png" alt="dango" id="dango">
+			<div class="header-content">
+				<img src="assets/dango.png" alt="dango" id="dango">
 
-			<div id="funfactcontainer">
-				<h4>Fun Fact</h4>
-				<p id="funfact"></p>
+				<div id="funfactcontainer">
+					<h4>Fun Fact</h4>
+					<p id="funfact"></p>
+				</div>
+				<script src="fact_script.js"></script> 
 			</div>
-			<script>
-				const funFacts = [
-					"Linux is a popular choice for governments and space agencies due to its security and reliability",
-					"The chrome operating system that our school cromebooks run are based on the linux kernel",
-					"The International Space Station and the Mars Rover both use Linux-based systems",
-					"Tux the penguin is the official mascot of Linux, chosen by Linus Torvalds, the creator of Linux, because penguins are cute and don't have much to do with operating systems.",
-					"The Linux kernel, the core of the Linux operating system, was initially released by Linus Torvalds in 1991 when he was just a student at the University of Helsinki.",
-					"Android, the popular mobile operating system, is based on the Linux kernel. This means that Android devices are, in essence, running a version of Linux.",
-					"The ARPANET, the precursor to the modern internet, was developed in the late 1960s and early 1970s by the U.S. Department of Defense's Advanced Research Projects Agency (ARPA), which is where the term 'ARPANET' comes from.",
-					"The first email was sent over the ARPANET in 1971 by Ray Tomlinson. He used the '@' symbol to separate the user's name from the computer they were using.",
-					"The World Wide Web (WWW) was created in 1989 by British computer scientist Tim Berners-Lee while working at CERN in Switzerland. The first website went live in 1991.",
-					"The C programming language was created by Dennis Ritchie at Bell Labs in the early 1970s. It evolved from the B programming language, which was developed by Ken Thompson.",
-					"The tradition of using 'Hello, World!' dates back to the book 'The C Programming Language' by Brian Kernighan and Dennis Ritchie, which introduced C to a wider audience.",
-					"C is considered a 'low-level' programming language because it provides a high level of control over hardware and memory. This makes it suitable for systems programming and developing operating systems.",
-					"Open-source projects like Linux showcase global collaboration, with developers worldwide working together to create and enhance software.",
-					"There are over 1.8 billion websites on the internet, highlighting its vastness. It would take over 57 years to visit each one at a rate of one per second.",
-				];	
-		
-				document.addEventListener("DOMContentLoaded", function() {
-					const funFactContainer = document.getElementById("funfactcontainer");
-					const funFactElement = document.getElementById("funfact");
-
-					// Generate a random index to select a fun fact
-					const randomIndex = Math.floor(Math.random() * funFacts.length);
-
-					// Display the randomly selected fun fact
-					funFactElement.textContent = funFacts[randomIndex];
-				});
-			</script>
 
 		</div>
 		<div class="main" id="box">
@@ -83,13 +54,22 @@
 					<li>Notebook</li>
 					<ul>
 						<li><a href="notebook/helloworld.html">Hello World</a></li>
+						<li><a href="notebook/pointers.html">Pointers</a></li>
+					</ul>
+					<li>Examples</li>
+					<ul>
+						<li><a href="notebook/synthetic.html">Sythetic Divison Script</a></li>
 					</ul>
 				</ul>
 				<li>Networking</li>
 				<ul>
-					<li>...</li>
 					<li>Homelab</li>
 					<li>Projects</li>
+				</ul>
+				<li>mehwm</li>
+				<ul>
+					<li><a href="notebook/wmsum.html">Whats a WM</a></li>
+					<li><a href="notebook/wmplan.html">My Plan</a></li>
 				</ul>
 			</ul>
 			<img src="assets/skewereddango.png" id="skewereddango">

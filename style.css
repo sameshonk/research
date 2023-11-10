@@ -1,9 +1,43 @@
+:root {
+	--code: whitesmoke;
+
+	--include: green;
+	--stdio: darkgreen;
+
+	--comment: grey;
+	--variable: red;
+	--quote: slateblue;
+	--value: green;
+}
+
+/* Default Theme (cool) */
+body.cool {
+  --background: #F9F5F6;
+  --top: #FDCEDF;
+  --box: #F8E8EE;
+  --border: #F2BED1;
+}
+
+/* Soft Theme */
+body.soft {
+  --background: #DADDB1;
+  --top: #BFB29E;
+  --box: #D6C7AE;
+  --border: #B3A492;
+}
+
+/* Dim Theme (incomplete) */
+body.dim {
+  --background: #867070;
+  --top: #E4D0D0;
+  --box: #D5B4B4;
+  --border: #F5EBEB;
+}
+
 body {
-	background: white;
-	background-image: radial-gradient(black 1px, transparent 0);
+	background: var(--background);
 	background-size: 40px 40px;
 	background-attachment: fixed;
-	font-family: 'PT Serif', serif;
 }
 
 .container {
@@ -18,10 +52,10 @@ a {
 
 h2{
 	margin: 0px;
-	padding: 2px;
-	background-color: lightgrey;
+	padding: 3px;
+	background-color: var(--top);
 	flex: 1;
-	text-indent: 4px;
+	border-bottom: 3px solid var(--border);
 }
 
 h3{
@@ -29,22 +63,32 @@ h3{
 	padding: 0;
 }
 
+h4 {
+ 	text-align: center;
+	margin: 0;
+	font-size: 22px;
+}
+
 p {
 	margin: 16px;
 	/*text-indent: 16px;*/
 }
 
+.entries p {
+	border-bottom: 3px solid var(--border);
+}
+
 #box {
-	background: cyan;
-	border: 2px solid grey;
+	background: var(--box);
+	border: 3px solid var(--border);
 	margin: 4px;
 	position: relative;
+	width: 100%;
 }
 
 .header {
 	flex: 1 100%;
 	height: 160px;
-	position: relative;
 }
 
 .top {
@@ -54,32 +98,29 @@ p {
 
 nav {
 	padding: 5px;
-	background-color: lightgrey;
+	background-color: var(--top);
 	list-style-type: none;
+	border-bottom: 3px solid var(--border);
 }
 
 nav a {
 	padding: 5px;
 }
 
+.header-content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 #dango {
 	height: 100px;
 	margin-top: 24px;
 	margin-left: 10px;
-	float: left;
-}
-
-h4 {
- 	text-align: center;
-	margin: 0;
-	font-size: 22px;
 }
 
 #funfactcontainer {
-	position: absolute;
-	bottom: 0;
-	right: 0;
 	width: 600px;
+	margin: auto;
 }
 
 #funfact {
@@ -100,37 +141,10 @@ ul {
 }
 
 #skewereddango {
-	height: 280px;
+	height: 250px;
 	position: absolute;
 	right: 0;
 	bottom: 0;
-}
-
-.scrapbox {
-	display: flex;
-	flex-wrap: wrap;
-	padding: 40px;
-	position: relative;
-}
-
-.scrapimg {
-	border: 2px dashed black;
-	margin: 35px;
-}
-
-#randomimage {
-	height: 20vw;
-	rotate: 2deg;
-}
-
-#update {
-	height: 15vw;
-	rotate: -3deg;
-}
-
-#neofetch {
-	height: 15vw;
-	rotate: -4deg;
 }
 
 #bestbuds {
@@ -141,13 +155,6 @@ ul {
 	z-index: 1;
 }
 
-#konata {
-	position: absolute;
-	bottom: 0;
-	height: 290px;
-	right: 0;
-}
-
 #fubuki {
 	position: absolute;
 	height: 240px;
@@ -156,18 +163,64 @@ ul {
 	z-index: 1;
 }
 
-#ui {
-	position: absolute;
-	height: 190px;
-	bottom: 0;
-	right: 0;
-	z-index: 2;
+.code {
+	font-size: 14px;
+	background: var(--code);    
+	padding: 5px;
+	margin: 16px;
+	white-space: pre-wrap;
+	overflow-x: auto;
+	border-left: 3px solid var(--border);
 }
 
-#code {
-	background: lightcyan;
-	position: relative;
-	margin: 20px;
-	padding: 10px;
-	border-left: 2px solid grey;
+.terminal {
+	font-size: 14px;
+	background: slategrey;
+	color: white;
+	padding: 5px;
+	margin: 16px;
+	white-space: pre-wrap;
+	overflow-x: auto;
+	border-left: 3px solid var(--border);
+}
+
+c {
+	background: var(--code);
+	padding: 1px;
+	border-radius: 3px;
+}
+
+grey {
+	color: var(--comment);
+}
+
+blue {
+	color: var(--quote);
+}
+
+green {
+	color: var(--include);
+}
+
+dgreen {
+	color: var(--stdio);
+	font-weight: bold;
+}
+
+lgreen {
+	color: var(--value);
+}
+
+red {
+   color: var(--variable);
+}
+
+#wmflex {
+	display: flex;
+}
+
+#rice {
+	height: 220px;
+	margin: 16px;
+	border: 3px solid var(--border);
 }

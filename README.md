@@ -1,2 +1,5 @@
 research/learning project for school
-# research
+
+todo:
+1. add more to readme
+2. update todo
