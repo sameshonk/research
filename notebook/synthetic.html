@@ -21,7 +21,7 @@
 				This page contains a synthetic division script in C. Synthetic division is a mathematical 
 				technique used to divide polynomials by a linear factor. The program takes the degree of 
 				the polynomial, the coefficients, and the divisor as input and calculates the results of 
-				synthetic division.
+				synthetic division. This idea came from Mr. Nunos maths class.
 			</p>
 
 			<pre class="code">
@@ -67,12 +67,12 @@
 
 
 			<p>
-				The loop for synthetic division within the <c>`syntheticDivision`</c> function iteratively computes each term of the quotient 
-				polynomial. Beginning with an initialization of <c>`i = 1`</c>, the loop progresses through the coefficients of the polynomial, 
+				The loop for synthetic division within the <c>syntheticDivision</c> function iteratively computes each term of the quotient 
+				polynomial. Beginning with an initialization of <c>i = 1</c>, the loop progresses through the coefficients of the polynomial, 
 				excluding the constant term, and employs the synthetic division algorithm to determine each term of the result polynomial. The 
-				update equation, <c>`results[i] = results[i - 1] * divisor + coefficients[i]`</c>, sums up the process by multiplying the 
-				previous result by the divisor and adding the next coefficient. The loop continues until <c>`i`</c> reaches the degree of the p
-				olynomial plus one <c>(`n`)</c>, ensuring that all coefficients of the quotient polynomial are computed.
+				update equation, <c>results[i] = results[i - 1] * divisor + coefficients[i]</c>, sums up the process by multiplying the 
+				previous result by the divisor and adding the next coefficient. The loop continues until <c>i</c> reaches the degree of the 
+				polynomial plus one <c>(n)</c>, ensuring that all coefficients of the quotient polynomial are computed.
 			</p>
 
 

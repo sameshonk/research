@@ -29,9 +29,9 @@ body.soft {
 /* Dim Theme (incomplete) */
 body.dim {
   --background: #867070;
-  --top: #E4D0D0;
-  --box: #D5B4B4;
-  --border: #F5EBEB;
+  --top: #;
+  --box: #;
+  --border: #;
 }
 
 body {
@@ -119,7 +119,7 @@ nav a {
 }
 
 #funfactcontainer {
-	width: 600px;
+	width: 60%;
 	margin: auto;
 }
 

@@ -26,7 +26,7 @@ int main() {
     printf("Enter the divisor (c): ");
     scanf("%d", &divisor);
 
-    int results[n]; // Array to store the results of synthetic division
+    int results[n];
 
     syntheticDivision(coefficients, n + 1, divisor, results);
 
